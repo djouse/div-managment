@@ -1,8 +1,7 @@
-function App() {
-
+const App = () => {
   return (
     <div className="flex gap-5">
-      <div className="w-20 h-20 bg-red-500 flex items-center">
+      <div className="w-20 h-20 bg-red-500 ">
         1
       </div>
       <div className="w-20 h-20  bg-red-500">
