@@ -1,32 +1,42 @@
-const App = () => {
-  return (
-    <div className="flex gap-5">
-      <div className="w-20 h-20 bg-red-500 ">
-        1
-      </div>
-      <div className="w-20 h-20  bg-red-500">
-        2
-      </div>
-      <div className="w-20 h-20 bg-red-500">
-        3
-      </div>
-      <div className="w-20 h-20 bg-red-500">
-        4
-      </div>
-      <div className="w-20 h-20 bg-red-500">
-        5
-      </div>
-      <div className="w-20 h-20 bg-red-500">
-        6
-      </div>
-      <div className="w-20 h-20 bg-red-500">
-        7
-      </div>
-      <div className="w-20 h-20 bg-red-500">
-        8
-      </div>
-    </div>
-  )
-}
+import Button from "@mui/material/Button";
+import { useNavigate } from "react-router";
 
-export default App
+const App = () => {
+  const navigate = useNavigate();
+
+  const onPressLearnMore = () => {
+    alert('You tapped the button!');
+  };
+  const onClickRoute = () => {
+    navigate("/exercise1"); 
+  };
+
+  return (
+    <>
+      <header className="flex-col align-center justify-start gap-1 p-2">
+        <h1>Exercise Board</h1>
+        <h2>This will be a simple exercise board paginated to go over CSS and React.</h2>
+        <h2>Simply a project for me to enjoy!</h2>
+      </header>
+
+      <div className="flex align-center justify-start gap-8 p-8">
+        <Button
+          onClick={onPressLearnMore}
+          variant="contained"
+          style={{ backgroundColor: "#b8b8b8ff" }}
+        >
+          Alert Stlye
+        </Button>
+        <Button
+          onClick={onClickRoute}
+          variant="contained"
+          style={{ backgroundColor: "#b8b8b8ff" }}
+        >
+          Exercise 1
+        </Button>
+      </div>
+    </>
+  );
+};
+
+export default App;
